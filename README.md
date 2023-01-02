@@ -1,4 +1,4 @@
-# PKG
+# Persona-knowledge-grouding-chatbot
 "Persona-Knowledge Dialogue Multi-Context Retrieval and Enhanced Decoding Methods" <br> 2022 COLING workshop on Customized Chat Grounding Persona and Knowledge, Accepted. <br>
 
 ## Shared task
