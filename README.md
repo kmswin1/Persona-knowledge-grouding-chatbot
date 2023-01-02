@@ -10,7 +10,6 @@
 ## Citation
 If you use any part of this code and pretrained weights for your own purpose, please cite our [paper](https://arxiv.org/pdf/2207.13919.pdf).
 ```
-```
 @InProceedings{
   title = 	 Persona-Knowledge Dialogue Multi-Context Retrieval and Enhanced Decoding Methods},
   author =       {Minsik Oh*, Minsang Kim*(*: equal contributions)},
