@@ -1,2 +1,2 @@
-# pkg-chat
-2022 COLING pkg-chat workshop, Accepted
+# constrained-persona-knowlege-chat
+See [PKChat Readme](PrevREADME.md)

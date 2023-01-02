@@ -1,0 +1,18 @@
+INFO:evaluate_test.py:Namespace(beam_length_alpha=1.0, beam_size=10, constrain=True, device='cuda', gen_eval=True, graph=1.0, inference=False, literal=1.0, local_rank=-1, markov_graph=1.0, markov_graph_v2=1.0, max_history=1, max_length=100, min_length=1, model_checkpoint='./models/train_focus_BART_E2_L10', model_name='BART', ner=1.0, no_sample=False, seed=19950604, select_max_len=False, submit_path='submit/submit_test_BART_MTL_BEAM_10_V6_LENGTH_100_ALPHA_1_0.txt', temperature=0.7, test_batch_size=1, test_dataset_cache='data/new_focus_cache_public_test.tar.gz', test_dataset_path='data/test_focus_public.json', top_k=0, top_p=0.9, without_rel=False)
+INFO:evaluate_test.py:Get model and tokenizer
+INFO:evaluate_test.py:Submit to : submit/submit_test_BART_MTL_BEAM_10_V6_LENGTH_100_ALPHA_1_0.txt
+INFO:evaluate_test.py:Model loaded
+INFO:evaluate_test.py:To Device
+INFO:evaluate_test.py:Prepare datasets
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/utils_focus.py:Process dataset from data/test_focus_public.json
+orig num 50265 num_added 0
+Traceback (most recent call last):
+  File "evaluate_test.py", line 461, in <module>
+    run()
+  File "evaluate_test.py", line 110, in run
+    test_loader, test_sampler = get_testdata_loaders(args, tokenizer, generation=True)
+  File "/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py", line 534, in get_testdata_loaders
+    plan = get_dataset_only_test(tokenizer, args.test_dataset_path, args.test_dataset_cache, args.without_rel)
+  File "/home/omsus20/Projects/constrained-persona-knowlege-chat/utils_focus.py", line 150, in get_dataset_only_test
+    ID = dialogue["dialogID"]
+TypeError: string indices must be integers

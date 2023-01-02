@@ -1,0 +1,27 @@
+INFO:evaluate_test.py:Namespace(beam_length_alpha=1.0, beam_size=10, constrain=True, device='cuda', gen_eval=True, graph=1.0, inference=False, literal=1.0, local_rank=-1, markov_graph=1.0, markov_graph_v2=1.0, max_history=1, max_length=100, min_length=1, model_checkpoint='./models/train_focus_BART_E2_L10', model_name='BART', ner=1.0, no_sample=False, seed=19950604, select_max_len=False, submit_path='submit/submit_test_BART_MTL_BEAM_10_V6_LENGTH_100_ALPHA_1_0.txt', temperature=0.7, test_batch_size=1, test_dataset_cache='data/new_focus_cache_public_test.tar.gz', test_dataset_path='data/test_focus_public.json', top_k=0, top_p=0.9, without_rel=False)
+INFO:evaluate_test.py:Get model and tokenizer
+INFO:evaluate_test.py:Submit to : submit/submit_test_BART_MTL_BEAM_10_V6_LENGTH_100_ALPHA_1_0.txt
+Traceback (most recent call last):
+  File "evaluate_test.py", line 461, in <module>
+    run()
+  File "evaluate_test.py", line 82, in run
+    model = BARTPK_ctxt.from_pretrained(args.model_checkpoint)
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/transformers/modeling_utils.py", line 1325, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/home/omsus20/Projects/constrained-persona-knowlege-chat/classification_modules.py", line 267, in __init__
+    super().__init__(config)
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/transformers/models/bart/modeling_bart.py", line 1223, in __init__
+    self.model = BartModel(config)
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/transformers/models/bart/modeling_bart.py", line 1106, in __init__
+    self.encoder = BartEncoder(config, self.shared)
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/transformers/models/bart/modeling_bart.py", line 686, in __init__
+    self.layers = nn.ModuleList([BartEncoderLayer(config) for _ in range(config.encoder_layers)])
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/transformers/models/bart/modeling_bart.py", line 686, in <listcomp>
+    self.layers = nn.ModuleList([BartEncoderLayer(config) for _ in range(config.encoder_layers)])
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/transformers/models/bart/modeling_bart.py", line 278, in __init__
+    self.final_layer_norm = nn.LayerNorm(self.embed_dim)
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/site-packages/torch/nn/modules/normalization.py", line 133, in __init__
+    if isinstance(normalized_shape, numbers.Integral):
+  File "/home/omsus20/miniconda3/envs/constrain/lib/python3.7/abc.py", line 137, in __instancecheck__
+    def __instancecheck__(cls, instance):
+KeyboardInterrupt

@@ -1,0 +1,50 @@
+INFO:evaluate_test.py:Namespace(constrain=True, constrain_fixed_mult=2.0, device='cuda', gen_eval=True, graph=True, inference=False, local_rank=-1, max_history=1, max_length=20, min_length=1, model_checkpoint='./models/train_focus_BART_E2_L10', model_name='BART', no_sample=False, seed=19950604, temperature=0.7, test_batch_size=1, test_dataset_cache='data/new_focus_cache_v3.tar.gz', test_dataset_path='data/new_valid_json_v3.json', top_k=0, top_p=0.9)
+INFO:evaluate_test.py:Get model and tokenizer
+INFO:evaluate_test.py:Model loaded
+INFO:evaluate_test.py:To Device
+INFO:evaluate_test.py:Prepare datasets
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/utils_focus.py:Process dataset from data/new_valid_json_v3.json
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/utils_focus.py:Tokenize and encode the dataset
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py:Build inputs and labels
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py:Pad inputs and convert to Tensor
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py:Build train and validation dataloaders
+INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py:Test dataset (Batch, Candidates, Seq length): torch.Size([5639, 112])
+WARNING:datasets_modules.metrics.bleurt.b625f1999ded9219290944d79922ee0c22a3a6b890ae6451404858dd37562aea.bleurt:Using default BLEURT-Base checkpoint for sequence maximum length 128. You can use a bigger model for better results with e.g.: datasets.load_metric('bleurt', 'bleurt-large-512').
+INFO:tensorflow:Reading checkpoint /home/omsus20/.cache/huggingface/metrics/bleurt/default/downloads/extracted/fd86d8d40b82fe5c03e42dbd5030dc333f9807d7341e4eed94e78f3e83295ab5/bleurt-base-128.
+INFO:tensorflow:Reading checkpoint /home/omsus20/.cache/huggingface/metrics/bleurt/default/downloads/extracted/fd86d8d40b82fe5c03e42dbd5030dc333f9807d7341e4eed94e78f3e83295ab5/bleurt-base-128.
+INFO:tensorflow:Config file found, reading.
+INFO:tensorflow:Config file found, reading.
+INFO:tensorflow:Will load checkpoint bert_custom
+INFO:tensorflow:Will load checkpoint bert_custom
+INFO:tensorflow:Loads full paths and checks that files exists.
+INFO:tensorflow:Loads full paths and checks that files exists.
+INFO:tensorflow:... name:bert_custom
+INFO:tensorflow:... name:bert_custom
+INFO:tensorflow:... vocab_file:vocab.txt
+INFO:tensorflow:... vocab_file:vocab.txt
+INFO:tensorflow:... bert_config_file:bert_config.json
+INFO:tensorflow:... bert_config_file:bert_config.json
+INFO:tensorflow:... do_lower_case:True
+INFO:tensorflow:... do_lower_case:True
+INFO:tensorflow:... max_seq_length:128
+INFO:tensorflow:... max_seq_length:128
+INFO:tensorflow:Creating BLEURT scorer.
+INFO:tensorflow:Creating BLEURT scorer.
+INFO:tensorflow:Creating WordPiece tokenizer.
+INFO:tensorflow:Creating WordPiece tokenizer.
+INFO:tensorflow:WordPiece tokenizer instantiated.
+INFO:tensorflow:WordPiece tokenizer instantiated.
+INFO:tensorflow:Creating Eager Mode predictor.
+INFO:tensorflow:Creating Eager Mode predictor.
+INFO:tensorflow:Loading model.
+INFO:tensorflow:Loading model.
+2022-04-30 01:46:08.927778: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:936] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-04-30 01:46:08.944564: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2022-04-30 01:46:08.944582: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2022-04-30 01:46:08.945621: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-04-30 01:46:09.332742: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 93763584 exceeds 10% of free system memory.
+INFO:tensorflow:BLEURT initialized.
+INFO:tensorflow:BLEURT initialized.
+  0%|          | 0/5639 [00:00<?, ?it/s]
