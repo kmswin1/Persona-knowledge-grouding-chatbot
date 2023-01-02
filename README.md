@@ -3,7 +3,7 @@
 
 ## Shared task
 |Tasks|Rank|
-|------|---|---|---|
+|------|---|
 |Retrieval|1st award|
 |Generation|1st award|
 
