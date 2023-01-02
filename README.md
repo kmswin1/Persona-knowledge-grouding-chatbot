@@ -1,8 +1,12 @@
 # PKG
 "Persona-Knowledge Dialogue Multi-Context Retrieval and Enhanced Decoding Methods" <br> 2022 COLING workshop on Customized Chat Grounding Persona and Knowledge, Accepted. <br>
-<p>Shared task<p> <br>
-retrieval - 1st award <br>
-generation - 1st award <br>
+
+## Shared task
+|Tasks|Rank|
+|------|---|---|---|
+|Retrieval|1st award|
+|Generation|1st award|
+
 ## Citation
 If you use any part of this code and pretrained weights for your own purpose, please cite our [paper](https://arxiv.org/pdf/2207.13919.pdf).
 ```
