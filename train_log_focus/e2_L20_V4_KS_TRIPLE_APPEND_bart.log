@@ -1,8 +1,0 @@
-INFO:train_focus.py:Arguments: Namespace(append_k_triples=True, bart_model_path='facebook/bart-base', dev_dataset_cache='data/focus_valid_cache_V4.tar.gz', dev_dataset_path='data/lines_v4_valid.json', device='cuda', eval_before_start=False, flag='E2_L10_V4_KS_TRIPLE_APPEND', fp16='', gpt2_model_path='gpt2', gpu_start_num=1, gradient_accumulation_steps=16, incontext=True, inference=False, kn_coef=1.0, lm_coef=10.0, local_rank=-1, lr=6.25e-05, max_history=1, max_norm=1.0, model_name='BART', n_epochs=2, ps_coef=1.0, random_knowledge=False, replace_k_triples=False, seed=19950604, test_infer=False, train_batch_size=4, train_dataset_cache='data/focus_train_cache_V4.tar.gz', train_dataset_path='data/lines_v4_train.json', valid_batch_size=1)
-INFO:train_focus.py:Prepare tokenizer, pretrained model and optimizer.
-Some weights of BARTPK_ctxt were not initialized from the model checkpoint at facebook/bart-base and are newly initialized: ['final_logits_bias', 'attn2.bias', 'attn1.weight', 'summary.summary.weight', 'summary.summary.bias', 'concat_summary.summary.weight', 'attn1.bias', 'concat_summary.summary.bias', 'attn2.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-INFO:train_focus.py:Prepare datasets
-INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/utils_focus.py:Load tokenized dataset from cache at data/focus_train_cache_V4.tar.gz_train_focus_BartTokenizer
-INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py:Build inputs and labels
-INFO:/home/omsus20/Projects/constrained-persona-knowlege-chat/data_utils.py:Pad inputs and convert to Tensor
